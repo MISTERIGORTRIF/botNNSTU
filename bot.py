@@ -4,10 +4,14 @@ import random
 from logginnnn import log_message
 from responses import responses
 
+from tone_analysis import analyze_sentiment, get_sentiment_response
+
 
 #--------------------------Обработчик ответов---------------------------------
 def chatbot_response(text):
     text = text.lower().strip()
+
+    # Сначала проверяем стандартные ответы
     for pattern, responses_list in responses.items():
         if re.search(pattern, text):
             response = random.choice(responses_list)
@@ -16,13 +20,10 @@ def chatbot_response(text):
                     return response(text)
                 return response()
             return response
-    return random.choice([
-        "Я не совсем понял вопрос...",
-        "Моя твоя не понимать!",
-        "Можешь переформулировать?",
-        "Я еще только учусь понимать такие фразы",
-        "Прости, я не знаю, что ответить"
-    ])
+
+    # Если стандартного ответа нет, анализируем тональность
+    polarity, sentiment = analyze_sentiment(text)
+    return get_sentiment_response(polarity, sentiment)
 #----------------------------------------------------------------------------
 
 
