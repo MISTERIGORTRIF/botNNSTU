@@ -2,6 +2,7 @@ from music import music
 from weather import weather
 from internet_find import web_search
 from timer import timer
+from calculator import calculate_expression
 
 #--------------------Определяем словарь шаблонов и ответов--------------------------
 responses = {
@@ -80,6 +81,11 @@ responses = {
     # Поиск
     r'(поиск ".*")': [
         lambda x: web_search(x),
+    ],
+
+    # Подсчет
+    r'(посчитай ".*")': [
+        lambda x: calculate_expression(x),
     ],
 
     # Прощание
