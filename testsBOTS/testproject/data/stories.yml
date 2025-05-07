@@ -1,0 +1,44 @@
+version: "2.0"
+
+stories:
+- story: greet and capabilities
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_capabilities
+  - action: utter_capabilities
+
+- story: ask weather
+  steps:
+  - intent: ask_weather
+  - action: action_get_weather
+
+- story: ask time
+  steps:
+  - intent: ask_time
+  - action: action_get_time
+
+- story: ask music
+  steps:
+  - intent: ask_music
+  - action: action_get_music
+
+- story: search query
+  steps:
+  - intent: search
+  - action: action_search
+
+- story: calculate expression
+  steps:
+  - intent: calculate
+  - action: action_calculate
+
+- story: handle insult
+  steps:
+  - intent: insult
+  - action: action_handle_insult
+
+- story: goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye

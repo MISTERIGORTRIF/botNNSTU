@@ -1,0 +1,12 @@
+{
+  "0": "ask_capabilities",
+  "1": "ask_music",
+  "2": "ask_time",
+  "3": "ask_weather",
+  "4": "calculate",
+  "5": "compliment",
+  "6": "goodbye",
+  "7": "greet",
+  "8": "insult",
+  "9": "search"
+}

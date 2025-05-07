@@ -1,7 +1,7 @@
 
 def forbidden_func():
     try:
-        with open("forbidden_file.txt", "r", encoding="utf8") as fin:
+        with open("../forbidden_file.txt", "r", encoding="utf8") as fin:
             mass = [] # Массив для перезаписи
             f = fin.readlines()
             for line in f:
