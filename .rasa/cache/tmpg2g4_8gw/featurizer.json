@@ -1,0 +1,62 @@
+{
+  "type": "IntentMaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "ask_music": 0,
+        "ask_time": 1,
+        "back": 2,
+        "calculate": 3,
+        "get_weather": 4,
+        "goodbye": 5,
+        "greet": 6,
+        "inform": 7,
+        "nlu_fallback": 8,
+        "out_of_scope": 9,
+        "restart": 10,
+        "search": 11,
+        "session_start": 12
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_get_time": 13,
+        "action_get_weather": 14,
+        "action_random_song": 15,
+        "action_calculate": 16,
+        "action_web_search": 17,
+        "action_analyze_sentiment": 18,
+        "utter_analyze_sentiment": 19,
+        "utter_ask_city": 20,
+        "utter_ask_time": 21,
+        "utter_goodbye": 22,
+        "utter_greet": 23,
+        "utter_music": 24,
+        "utter_search_result": 25,
+        "utter_weather": 26
+      },
+      "entities": {
+        "city": 0
+      },
+      "slots": {
+        "city_0": 0
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

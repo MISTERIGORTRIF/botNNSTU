@@ -1,34 +1,48 @@
 version: "3.1"
-
 intents:
   - greet
   - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - calculate
+  - ask_music
+  - get_weather
+  - ask_time
+  - search
+  - inform
+
+entities:
+  - city
+
+slots:
+  city:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: city
+
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
+    - text: "Привет! Чем могу помочь?"
   utter_goodbye:
-  - text: "Bye"
+    - text: "До встречи!"
+  utter_ask_city:
+    - text: "В каком городе тебя интересует погода?"
+  utter_weather:
+    - text: "Погода в {city} сейчас отличная!"
+  utter_music:
+    - text: "Музыкальный функционал в разработке 🎵"
+  utter_ask_time:
+    - text: "Текущее время: {time}"
+  utter_search_result:
+    - text: "🔍 Результаты поиска по '{search_query}':\n(функционал в разработке)"
+  utter_analyze_sentiment:
+    - text: "{sentiment_response}"
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+actions:
+  - action_get_time
+  - action_get_weather
+  - action_random_song
+  - action_calculate
+  - action_web_search
+  - action_analyze_sentiment

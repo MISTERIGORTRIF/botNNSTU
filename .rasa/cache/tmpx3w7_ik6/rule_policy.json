@@ -1,0 +1,36 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"get_weather\"}}]": "action_get_weather",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"get_weather\"}}, {\"prev_action\": {\"action_name\": \"action_get_weather\"}, \"user\": {\"intent\": \"get_weather\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"search\"}}]": "action_extract_search_query",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"search\"}}, {\"prev_action\": {\"action_name\": \"action_extract_search_query\"}, \"user\": {\"intent\": \"search\"}}]": "utter_search_result",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"search\"}}, {\"prev_action\": {\"action_name\": \"action_extract_search_query\"}, \"user\": {\"intent\": \"search\"}}, {\"prev_action\": {\"action_name\": \"utter_search_result\"}, \"user\": {\"intent\": \"search\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_music\"}}]": "action_random_song",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_music\"}}, {\"prev_action\": {\"action_name\": \"action_random_song\"}, \"user\": {\"intent\": \"ask_music\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"calculate\"}}]": "action_calculate",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"calculate\"}}, {\"prev_action\": {\"action_name\": \"action_calculate\"}, \"user\": {\"intent\": \"calculate\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_time\"}}]": "action_get_time",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_time\"}}, {\"prev_action\": {\"action_name\": \"action_get_time\"}, \"user\": {\"intent\": \"ask_time\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"calculate\"}}, {\"prev_action\": {\"action_name\": \"action_calculate\"}, \"user\": {\"intent\": \"calculate\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"search\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"search\"}}, {\"prev_action\": {\"action_name\": \"action_extract_search_query\"}, \"user\": {\"intent\": \"search\"}}, {\"prev_action\": {\"action_name\": \"utter_search_result\"}, \"user\": {\"intent\": \"search\"}}]",
+      "predicting default action with intent restart",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_time\"}}, {\"prev_action\": {\"action_name\": \"action_get_time\"}, \"user\": {\"intent\": \"ask_time\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"search\"}}, {\"prev_action\": {\"action_name\": \"action_extract_search_query\"}, \"user\": {\"intent\": \"search\"}}]",
+      "predicting default action with intent session_start",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"calculate\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_music\"}}]",
+      "predicting default action with intent back",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_music\"}}, {\"prev_action\": {\"action_name\": \"action_random_song\"}, \"user\": {\"intent\": \"ask_music\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_time\"}}]"
+    ]
+  }
+}

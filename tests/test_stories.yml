@@ -1,91 +1,73 @@
-#### This file contains tests to evaluate that your bot behaves as expected.
-#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
-
 stories:
-- story: happy path 1
+- story: happy path greet
   steps:
   - user: |
-      hello there!
+      привет
     intent: greet
   - action: utter_greet
+
+
+- story: weather default city
+  steps:
   - user: |
-      amazing
+      покажи погоду
+    intent: get_weather
+  - action: action_get_weather
+  - slot_was_set:
+      - city: "Нижний Новгород"
+
+- story: weather specific city
+  steps:
+  - user: |
+      погода в Москве
+    intent: get_weather
+    entities:
+      - city: Москва
+  - action: action_get_weather
+  - slot_was_set:
+      - city: "Москва"
+
+- story: music recommendation
+  steps:
+  - user: |
+      посоветуй песню
+    intent: get_music
+  - action: action_get_music
+
+- story: sentiment positive
+  steps:
+  - user: |
+      у меня отличное настроение
     intent: mood_great
+  - action: action_analyze_sentiment
   - action: utter_happy
 
-- story: happy path 2
+- story: sentiment negative
   steps:
   - user: |
-      hello there!
-    intent: greet
-  - action: utter_greet
-  - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
-  - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
-
-- story: sad path 1
-  steps:
-  - user: |
-      hello
-    intent: greet
-  - action: utter_greet
-  - user: |
-      not good
+      мне плохо
     intent: mood_unhappy
+  - action: action_analyze_sentiment
   - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      yes
-    intent: affirm
-  - action: utter_happy
 
-- story: sad path 2
+- story: calculation
   steps:
   - user: |
-      hello
-    intent: greet
-  - action: utter_greet
-  - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      not really
-    intent: deny
-  - action: utter_goodbye
+      посчитай "2 + 2"
+    intent: calculate
+  - action: action_calculate
 
-- story: sad path 3
+- story: search
   steps:
   - user: |
-      hi
-    intent: greet
-  - action: utter_greet
-  - user: |
-      very terrible
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      no
-    intent: deny
-  - action: utter_goodbye
-
-- story: say goodbye
-  steps:
-  - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
+      поиск "погода в москве"
+    intent: search
+  - action: action_search
 
 - story: bot challenge
   steps:
   - user: |
-      are you a bot?
+      ты бот?
     intent: bot_challenge
-  - action: utter_iamabot
+  - action: action_bot_challenge
+

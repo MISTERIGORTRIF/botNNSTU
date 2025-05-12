@@ -1,91 +1,91 @@
 version: "3.1"
-
 nlu:
 - intent: greet
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - привет
+    - здравствуй
+    - хай
+    - добрый день
+    - приветик
 
 - intent: goodbye
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - пока
+    - до свидания
+    - увидимся
+    - прощай
+    - до встречи
 
-- intent: affirm
+- intent: get_weather
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - погода в [Москва](city)
+    - какая погода в [Москва](city)
+    - покажи погоду в [Москва](city)
+    - прогноз погоды для [Москва](city)
+    - что за погода в [Москва](city)
+    - погода в [Гидроторф](city)
+    - какая погода в [Балахна](city)?
+    - прогноз для [Дзержинск](city)
+    - какая погода сегодня?
+    - будет дождь?
 
-- intent: deny
+- intent: calculate
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - посчитай "2+2"
+    - посчитай "3 * 5"
+    - посчитай 2+2
+    - сколько будет 5 умножить на 3
+    - вычисли 10 разделить на 2
+    - 15 минус 7
+    - 2 в степени 3
+    - что будет, если 5+5?
+    - вычисли 100 / 4
 
-- intent: mood_great
+- intent: ask_music
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - Включи песню
+    - Хочу музыку
+    - Посоветуй трек
+    - Поставь песню
+    - Спой что-нибудь
+    - Давай послушаем песню
+    - Включи музыку
+    - Песня
+    - Музыка
+    - Найди песню
+    - Дай послушать что-нибудь
 
-- intent: mood_unhappy
+- intent: ask_time
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - Сколько времени?
+    - Который час?
+    - Текущее время
+    - Время
+    - Подскажи время
+    - Скажи, сколько сейчас времени
 
-- intent: bot_challenge
+- intent: search
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - поиск "аниме"
+    - поиск 'аниме'
+    - поиск аниме
+    - найди аниме
+    - ищи аниме
+    - поиск в интернете аниме
+    - найди мне аниме
+    - поищи аниме
+    - покажи информацию о фильме
+    - найди рецепт борща
+
+- intent: inform
+  examples: |
+    - Привет, как дела?
+    - Мне грустно
+    - Я тебя люблю
+    - Я устал
+    - Хочу поиграть
+    - Сегодня хорошая погода
+    - Ты классный
+    - Почему так сложно?
+    - У меня все хорошо
+    - Хочу рассказать тебе секрет
