@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-city",
+      "2": "I-city",
+      "3": "L-city",
+      "4": "U-city",
+      "5": "B-hobby",
+      "6": "I-hobby",
+      "7": "L-hobby",
+      "8": "U-hobby",
+      "9": "B-location",
+      "10": "I-location",
+      "11": "L-location",
+      "12": "U-location",
+      "13": "B-name",
+      "14": "I-name",
+      "15": "L-name",
+      "16": "U-name",
+      "17": "B-text",
+      "18": "I-text",
+      "19": "L-text",
+      "20": "U-text",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-city": 1,
+      "I-city": 2,
+      "L-city": 3,
+      "U-city": 4,
+      "B-hobby": 5,
+      "I-hobby": 6,
+      "L-hobby": 7,
+      "U-hobby": 8,
+      "B-location": 9,
+      "I-location": 10,
+      "L-location": 11,
+      "U-location": 12,
+      "B-name": 13,
+      "I-name": 14,
+      "L-name": 15,
+      "U-name": 16,
+      "B-text": 17,
+      "I-text": 18,
+      "L-text": 19,
+      "U-text": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

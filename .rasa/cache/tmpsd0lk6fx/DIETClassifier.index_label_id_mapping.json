@@ -1,0 +1,12 @@
+{
+  "0": "ask_music",
+  "1": "ask_stats",
+  "2": "ask_time",
+  "3": "calculate",
+  "4": "get_weather",
+  "5": "goodbye",
+  "6": "greet",
+  "7": "inform",
+  "8": "provide_name",
+  "9": "search"
+}

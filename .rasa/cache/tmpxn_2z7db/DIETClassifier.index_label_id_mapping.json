@@ -1,0 +1,14 @@
+{
+  "0": "analyze_text",
+  "1": "ask_capabilities",
+  "2": "ask_date",
+  "3": "ask_name",
+  "4": "ask_time",
+  "5": "ask_weather",
+  "6": "calculate",
+  "7": "echo",
+  "8": "goodbye",
+  "9": "greet",
+  "10": "help",
+  "11": "provide_user_info"
+}

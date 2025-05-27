@@ -2,28 +2,32 @@ version: "3.1"
 stories:
 - story: Weather request
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: get_weather
-  - action: action_get_weather
+    - intent: greet
+    - action: utter_greet
+    - intent: get_weather
+    - action: action_get_weather
+    - action: action_log_response
 
 - story: Goodbye
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
+    - intent: goodbye
+    - action: utter_goodbye
+    - action: action_log_response
 
 - story: user asks for search
   steps:
-  - intent: search
-  - action: action_web_search
+    - intent: search
+    - action: action_web_search
+    - action: action_log_response
 
 - story: Запрос песни
   steps:
-  - intent: ask_music
-  - action: action_random_song
+    - intent: ask_music
+    - action: action_random_song
+    - action: action_log_response
 
 - story: Анализ тональности сообщения
   steps:
-  - intent: inform
-  - action: action_analyze_sentiment
-
+    - intent: inform
+    - action: action_analyze_sentiment
+    - action: action_log_response

@@ -2,36 +2,38 @@ version: "3.1"
 
 rules:
 
-- rule: Say 'I am a bot' anytime the user challenges
-  steps:
-  - intent: bot_challenge
-
 - rule: Ответ на запрос погоды
   steps:
     - intent: get_weather
     - action: action_get_weather
+    - action: action_log_response
 
 - rule: Ответ на запрос музыки
   steps:
     - intent: ask_music
     - action: action_random_song
+    - action: action_log_response
 
 - rule: Ответ на математический запрос
   steps:
     - intent: calculate
     - action: action_calculate
+    - action: action_log_response
 
 - rule: Ответ на запрос времени
   steps:
     - intent: ask_time
     - action: action_get_time
+    - action: action_log_response
 
 - rule: Обработка поиска
   steps:
     - intent: search
     - action: action_web_search
+    - action: action_log_response
 
 - rule: Анализировать тональность для любых других сообщений
   steps:
     - intent: inform
     - action: action_analyze_sentiment
+    - action: action_log_response

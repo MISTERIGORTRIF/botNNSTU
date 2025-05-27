@@ -46,3 +46,4 @@ actions:
   - action_calculate
   - action_web_search
   - action_analyze_sentiment
+  - action_log_response
